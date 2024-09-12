@@ -5,9 +5,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-import React from "react";
-
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
     <>
       <h1>Homepage</h1>
