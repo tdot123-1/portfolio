@@ -9,10 +9,16 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuPortal,
   DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, HamburgerMenuIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import Contact from "./Contact";
+import { MailIcon } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -24,12 +30,12 @@ const Navbar = () => {
           </div>
 
           {/* desktop */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             <HoverCard>
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  isActive ? "text-slate-800 font-bold" : "text-slate-600"
+                  isActive ? "text-slate-700 font-bold" : "text-slate-600"
                 }
               >
                 <HoverCardTrigger asChild>
@@ -44,7 +50,7 @@ const Navbar = () => {
               <NavLink
                 to="/projects"
                 className={({ isActive }) =>
-                  isActive ? "text-slate-800 font-bold" : "text-slate-600"
+                  isActive ? "text-slate-700 font-bold" : "text-slate-600"
                 }
               >
                 <HoverCardTrigger asChild>
@@ -59,7 +65,7 @@ const Navbar = () => {
               <NavLink
                 to="/skills"
                 className={({ isActive }) =>
-                  isActive ? "text-slate-800 font-bold" : "text-slate-600"
+                  isActive ? "text-slate-700 font-bold" : "text-slate-600"
                 }
               >
                 <HoverCardTrigger asChild>
@@ -71,6 +77,7 @@ const Navbar = () => {
                 add to my skillset
               </HoverCardContent>
             </HoverCard>
+            <Contact />
           </div>
 
           {/* mobile */}
@@ -93,6 +100,31 @@ const Navbar = () => {
                 <DropdownMenuItem asChild>
                   <Link to="/skills">Skills</Link>
                 </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger>Contact</DropdownMenuSubTrigger>
+                  <DropdownMenuPortal>
+                    <DropdownMenuSubContent>
+                      <DropdownMenuItem>
+                        <span className="flex gap-1 justify-center items-center">
+                          <MailIcon className="h-4 w-4" /> emailadress@test.com
+                        </span>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <span className="flex gap-1 justify-center items-center">
+                          <GitHubLogoIcon className="h-5 w-5" />
+                          github/my-account
+                        </span>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <span className="flex gap-1 justify-center">
+                          <LinkedInLogoIcon className="h-5 w-5" />{" "}
+                          linkedIn/my-profile
+                        </span>
+                      </DropdownMenuItem>
+                    </DropdownMenuSubContent>
+                  </DropdownMenuPortal>
+                </DropdownMenuSub>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
