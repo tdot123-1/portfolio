@@ -30,7 +30,7 @@ const Contact = () => {
               </span>
             </div>
             <div className="bg-gray-200 p-4 rounded-sm col-span-2 items-center">
-              <span className="flex gap-1 justify-center">
+              <span className="flex gap-1 justify-center items-center">
                 <LinkedInLogoIcon className="h-5 w-5" /> linkedIn/my-profile
               </span>
             </div>
