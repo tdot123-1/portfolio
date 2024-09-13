@@ -8,6 +8,7 @@ import {
 
 import Contact from "./Contact";
 import NavbarMobile from "./NavbarMobile";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const Navbar = () => {
   return (
@@ -15,7 +16,12 @@ const Navbar = () => {
       <nav className="bg-slate-300 border-b-2 border-slate-600 backdrop-blur-md bg-opacity-80">
         <div className="container mx-auto p-4 flex justify-between items-center">
           <div>
-            <NavLink to="/">Home (avatar)</NavLink>
+            <NavLink to="/">
+              <Avatar>
+                <AvatarImage src="" />
+                <AvatarFallback className="text-slate-600 bg-slate-400 border-2 border-slate-600">TK</AvatarFallback>
+              </Avatar>
+            </NavLink>
           </div>
 
           {/* desktop */}
