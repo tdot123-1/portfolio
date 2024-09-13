@@ -9,6 +9,7 @@ import {
   IconBrandPython,
   IconBrandReact,
 } from "@tabler/icons-react";
+import FadeInText from "@/components/custom/FadeInText";
 
 const HomePage = () => {
   return (
@@ -23,15 +24,12 @@ const HomePage = () => {
           <h2 className="py-1 underline font-semibold text-slate-900 text-2xl">
             Introduce webpage
           </h2>
-          <p className="text-slate-300">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
-            obcaecati laboriosam optio unde maxime! Dicta inventore eos
-            dignissimos a deserunt hic delectus optio facere nostrum odio, earum
-            commodi assumenda dolorum. Lorem ipsum dolor sit, amet consectetur
-            adipisicing elit. Tenetur quas consectetur non officiis similique
-            recusandae nemo doloribus nihil, hic, natus ipsa sapiente voluptatum
-            iusto corrupti. Eius itaque quidem optio earum!
-          </p>
+          
+            <FadeInText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            repudiandae repellendus quibusdam dolorem impedit inventore sed
+            numquam dolore provident, aut modi, expedita adipisci labore,
+            repellat fuga eius corporis! Mollitia, accusantium!" />
+          
         </article>
       </section>
       <section className="container h-screen bg-slate-200">
