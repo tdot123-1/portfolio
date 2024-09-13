@@ -5,7 +5,9 @@ import Navbar from "./components/custom/Navbar";
 function App() {
   return (
     <>
-      <Navbar />
+      <header className="sticky top-0">
+        <Navbar />
+      </header>
       <Routes>
         {routes.map(({ path, element }) => (
           <Route key={path} path={path} element={element} />
