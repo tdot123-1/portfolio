@@ -12,20 +12,12 @@ import {
 
 import TypingEffect from "@/components/custom/TypingEffect";
 import SlideInEffect from "@/components/custom/SlideInEffect";
+import SlideInColsEffect from "@/components/custom/SlideInColsEffect";
 
 const testImages = [
-  <img
-    className="md:aspect-video "
-    src="https://placehold.co/600x400"
-  />,
-  <img
-    className="md:aspect-video "
-    src="https://placehold.co/600x400"
-  />,
-  <img
-    className="md:aspect-video "
-    src="https://placehold.co/600x400"
-  />,
+  <img className="md:aspect-video " src="https://placehold.co/600x400" />,
+  <img className="md:aspect-video " src="https://placehold.co/600x400" />,
+  <img className="md:aspect-video " src="https://placehold.co/600x400" />,
 ];
 
 const HomePage = () => {
@@ -36,7 +28,7 @@ const HomePage = () => {
           Hello World!
         </h1>
       </section>
-      <section className="container h-screen bg-slate-500 flex justify-center items-center">
+      <section className="container h-screen bg-slate-500 flex justify-center items-center px-2">
         <article className="container md:max-w-2xl mx-2 border-2 border-slate-300 text-center p-3 rounded-md">
           <h2 className="py-1 underline font-semibold text-slate-900 text-2xl">
             Introduce webpage
@@ -44,7 +36,7 @@ const HomePage = () => {
           <TypingEffect text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo totam itaque nam magni nemo, ad hic quam officiis. Perspiciatis molestiae consectetur autem hic unde distinctio cum tempora voluptatum maxime impedit." />
         </article>
       </section>
-      <section className="container h-screen bg-slate-200">
+      <section className="container h-screen bg-slate-200 px-2">
         <h2 className="text-center py-4 underline font-semibold text-slate-900 text-2xl">
           Get To Know Me
         </h2>
@@ -69,40 +61,13 @@ const HomePage = () => {
               className="bg-slate-700 text-slate-200 hover:bg-slate-900"
               variant="default"
             >
-              Find out more <ArrowBigRightIcon />{" "}
+              Find out more <ArrowBigRightIcon />
             </Button>
           </Link>
         </div>
       </section>
-      <section className="container h-screen bg-slate-500">
-        <div className="grid grid-cols-3 grid-rows-[auto,1fr] h-full">
-          <h2 className="col-span-3 text-center py-4 underline font-semibold text-slate-900 text-2xl">
-            My Projects
-          </h2>
-          <div className="flex flex-col items-center justify-evenly">
-            <img className="w-56" src="https://placehold.co/600x400" />
-            <img className="w-56" src="https://placehold.co/600x400" />
-            <img className="w-56" src="https://placehold.co/600x400" />
-          </div>
-          <article className="flex flex-col items-center justify-center">
-            <p className="text-slate-300 text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Distinctio vel veritatis porro eius, quasi recusandae repudiandae
-              reiciendis incidunt unde similique, facilis ea obcaecati explicabo
-              nam quidem id delectus eligendi iste.
-            </p>
-          </article>
-          <div className="flex flex-col justify-center items-center">
-            <Link to="/projects">
-              <Button
-                className="bg-slate-300 text-slate-700 hover:bg-slate-400"
-                variant="default"
-              >
-                Find out more <ArrowBigRightIcon />
-              </Button>
-            </Link>
-          </div>
-        </div>
+      <section className="container h-screen bg-slate-500 px-2">
+        <SlideInColsEffect />
       </section>
       <section className="container h-screen bg-slate-200">
         <h2 className="text-center py-4 underline font-semibold text-slate-900 text-2xl">

@@ -10,6 +10,7 @@ const SlideInEffect = ({ content }: SlideInEffectProps) => {
   const isInView = useInView(ref, { once: true });
   const [columns, setColumns] = useState(`columns-${content.length}`);
 
+  // change amount of columns dynamically (not yet functioning correctly)
   useEffect(() => {
     setColumns(`columns-${content.length}`);
 
@@ -40,7 +41,7 @@ const SlideInEffect = ({ content }: SlideInEffectProps) => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={parentVariants}
-      className={`px-2 ${columns}`}
+      className={`columns-3`}
     >
       {content.map((item, index) => (
         <motion.div key={index} variants={variants}>
