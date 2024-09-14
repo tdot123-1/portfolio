@@ -5,7 +5,8 @@ import TypingEffect from "@/components/custom/TypingEffect";
 import SlideInEffect from "@/components/custom/SlideInEffect";
 import SlideInColsEffect from "@/components/custom/SlideInColsEffect";
 import SpinGrowEffect from "@/components/custom/SpinGrowEffect";
-import { IconWorld } from "@tabler/icons-react";
+
+import GlobeScene from "@/components/model/GlobeScene";
 
 const testImages = [
   <img className="md:aspect-video " src="https://placehold.co/600x400" />,
@@ -16,11 +17,12 @@ const testImages = [
 const HomePage = () => {
   return (
     <>
-      <section className="container h-screen bg-slate-200 flex justify-center items-center">
+      <section className="container h-screen bg-slate-200 flex justify-center items-center flex-col">
         <h1 className=" font-extrabold underline text-4xl text-slate-900">
           Hello World!
         </h1>
-        <IconWorld className="size-10 text-slate-500" />
+        
+        <GlobeScene />
       </section>
       <section className="container h-screen bg-slate-500 flex justify-center items-center px-2">
         <article className="container md:max-w-2xl mx-2 border-2 border-slate-300 text-center p-3 rounded-md">
