@@ -1,18 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowBigRightIcon } from "lucide-react";
 import { Link } from "react-router-dom";
-import {
-  IconBrandDjango,
-  IconBrandHtml5,
-  IconBrandJavascript,
-  IconBrandNodejs,
-  IconBrandPython,
-  IconBrandReact,
-} from "@tabler/icons-react";
-
 import TypingEffect from "@/components/custom/TypingEffect";
 import SlideInEffect from "@/components/custom/SlideInEffect";
 import SlideInColsEffect from "@/components/custom/SlideInColsEffect";
+import SpinGrowEffect from "@/components/custom/SpinGrowEffect";
+import { IconWorld } from "@tabler/icons-react";
 
 const testImages = [
   <img className="md:aspect-video " src="https://placehold.co/600x400" />,
@@ -27,6 +20,7 @@ const HomePage = () => {
         <h1 className=" font-extrabold underline text-4xl text-slate-900">
           Hello World!
         </h1>
+        <IconWorld className="size-10 text-slate-500" />
       </section>
       <section className="container h-screen bg-slate-500 flex justify-center items-center px-2">
         <article className="container md:max-w-2xl mx-2 border-2 border-slate-300 text-center p-3 rounded-md">
@@ -73,26 +67,7 @@ const HomePage = () => {
         <h2 className="text-center py-4 underline font-semibold text-slate-900 text-2xl">
           My Skills
         </h2>
-        <div className="w-2/5 mx-auto grid grid-cols-3 grid-rows-2">
-          <div className="flex justify-center py-3">
-            <IconBrandReact className="text-slate-800 size-8" />
-          </div>
-          <div className="flex justify-center py-3">
-            <IconBrandJavascript className="text-slate-800 size-10" />
-          </div>
-          <div className="flex justify-center py-3">
-            <IconBrandPython className="text-slate-800 size-10" />
-          </div>
-          <div className="flex justify-center py-3">
-            <IconBrandHtml5 className="text-slate-800 size-10" />
-          </div>
-          <div className="flex justify-center py-3">
-            <IconBrandDjango className="text-slate-800 size-10" />
-          </div>
-          <div className="flex justify-center py-3">
-            <IconBrandNodejs className="text-slate-800 size-10" />
-          </div>
-        </div>
+        <SpinGrowEffect />
         <article className="container my-12 md:max-w-2xl mx-auto">
           <p className="text-slate-700 text-center">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur

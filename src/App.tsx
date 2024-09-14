@@ -6,7 +6,7 @@ import Footer from "./components/custom/Footer";
 function App() {
   return (
     <>
-      <header className="sticky top-0">
+      <header className="sticky top-0 z-10">
         <Navbar />
       </header>
       <Routes>
