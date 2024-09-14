@@ -4,32 +4,41 @@ import { useEffect, useRef, useState } from "react";
 interface TypingEffectProps {
   text: string;
   speed?: number;
-  //isVisible: boolean;
 }
 
 const TypingEffect = ({ text, speed = 50 }: TypingEffectProps) => {
   const [displayedText, setDisplayedText] = useState("");
-  //const [scope, animate] = useAnimate();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const ref = useRef(null);
   const isInView = useInView(ref);
 
   useEffect(() => {
-    console.log("in view: ", isInView);
-    if (!isInView) return setDisplayedText("");
 
-    const startTyping = async () => {
-      for (let i = 0; i < text.length; i++) {
-        setDisplayedText(text.slice(0, i));
+    // reference to timeout to be cleared
+    let typingTimeout: NodeJS.Timeout;
 
-        //await animate(scope.current, { opacity: [0, 1] }, { duration: 0.1 });
-
-        await new Promise((resolve) => setTimeout(resolve, speed));
+    // display letters one by one
+    const startTyping = () => {
+      if (currentIndex < text.length && isInView) {
+        // display the char at current index, increase current index by 1
+        typingTimeout = setTimeout(() => {
+          setDisplayedText((prevState) => prevState + text[currentIndex]);
+          setCurrentIndex((prevState) => prevState + 1);
+        }, speed);
       }
     };
 
-    startTyping();
-  }, [text, speed, isInView]);
+    // only start typing when div is in view
+    if (isInView) {
+      startTyping();
+    }
+
+    // clear timeout on unmount or div is out of view
+    return () => {
+      clearTimeout(typingTimeout);
+    };
+  }, [text, speed, isInView, currentIndex]);
 
   return (
     <>

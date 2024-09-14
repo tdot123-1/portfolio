@@ -11,6 +11,22 @@ import {
 } from "@tabler/icons-react";
 
 import TypingEffect from "@/components/custom/TypingEffect";
+import SlideInEffect from "@/components/custom/SlideInEffect";
+
+const testImages = [
+  <img
+    className="md:aspect-video "
+    src="https://placehold.co/600x400"
+  />,
+  <img
+    className="md:aspect-video "
+    src="https://placehold.co/600x400"
+  />,
+  <img
+    className="md:aspect-video "
+    src="https://placehold.co/600x400"
+  />,
+];
 
 const HomePage = () => {
   return (
@@ -25,7 +41,6 @@ const HomePage = () => {
           <h2 className="py-1 underline font-semibold text-slate-900 text-2xl">
             Introduce webpage
           </h2>
-
           <TypingEffect text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo totam itaque nam magni nemo, ad hic quam officiis. Perspiciatis molestiae consectetur autem hic unde distinctio cum tempora voluptatum maxime impedit." />
         </article>
       </section>
@@ -33,11 +48,9 @@ const HomePage = () => {
         <h2 className="text-center py-4 underline font-semibold text-slate-900 text-2xl">
           Get To Know Me
         </h2>
-        <div className="columns-3 px-2">
-          <img className="md:aspect-video" src="https://placehold.co/600x400" />
-          <img className="md:aspect-video" src="https://placehold.co/600x400" />
-          <img className="md:aspect-video" src="https://placehold.co/600x400" />
-        </div>
+
+        <SlideInEffect content={testImages} />
+
         <article className="container mt-5 md:max-w-2xl mx-auto">
           <p className="text-slate-700 text-center">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
