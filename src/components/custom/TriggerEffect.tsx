@@ -15,7 +15,7 @@ const TriggerEffect = ({ children, threshold = 0.1 }: TriggerEffectProps) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          //observer.disconnect();
+          observer.disconnect();
         }
       },
       { threshold }

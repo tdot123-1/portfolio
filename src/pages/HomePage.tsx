@@ -9,7 +9,7 @@ import {
   IconBrandPython,
   IconBrandReact,
 } from "@tabler/icons-react";
-import TriggerEffect from "@/components/custom/TriggerEffect";
+
 import TypingEffect from "@/components/custom/TypingEffect";
 
 const HomePage = () => {
@@ -26,14 +26,7 @@ const HomePage = () => {
             Introduce webpage
           </h2>
 
-          <TriggerEffect>
-            {(isVisible) => (
-              <TypingEffect
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis quam iusto minus illo culpa laborum porro dolorum eos! Aspernatur maxime aliquam perferendis hic quae officia sunt eum dicta voluptas."
-                isVisible={isVisible}
-              />
-            )}
-          </TriggerEffect>
+          <TypingEffect text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo totam itaque nam magni nemo, ad hic quam officiis. Perspiciatis molestiae consectetur autem hic unde distinctio cum tempora voluptatum maxime impedit." />
         </article>
       </section>
       <section className="container h-screen bg-slate-200">
