@@ -9,7 +9,8 @@ import {
   IconBrandPython,
   IconBrandReact,
 } from "@tabler/icons-react";
-import FadeInText from "@/components/custom/FadeInText";
+import TriggerEffect from "@/components/custom/TriggerEffect";
+import TypingEffect from "@/components/custom/TypingEffect";
 
 const HomePage = () => {
   return (
@@ -24,12 +25,15 @@ const HomePage = () => {
           <h2 className="py-1 underline font-semibold text-slate-900 text-2xl">
             Introduce webpage
           </h2>
-          
-            <FadeInText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-            repudiandae repellendus quibusdam dolorem impedit inventore sed
-            numquam dolore provident, aut modi, expedita adipisci labore,
-            repellat fuga eius corporis! Mollitia, accusantium!" />
-          
+
+          <TriggerEffect>
+            {(isVisible) => (
+              <TypingEffect
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis quam iusto minus illo culpa laborum porro dolorum eos! Aspernatur maxime aliquam perferendis hic quae officia sunt eum dicta voluptas."
+                isVisible={isVisible}
+              />
+            )}
+          </TriggerEffect>
         </article>
       </section>
       <section className="container h-screen bg-slate-200">
