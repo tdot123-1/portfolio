@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      transform: {
+        "preserve-3d": "preserve-3d",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

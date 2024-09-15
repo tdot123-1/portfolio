@@ -1,13 +1,14 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
+import { OrbitControls } from "@react-three/drei";
 
 const SpinningGlobe = () => {
   const globeRef = useRef<THREE.Mesh>(null);
 
   useFrame(() => {
     if (globeRef.current) {
-      globeRef.current.rotation.y += 0.03;
+      globeRef.current.rotation.y += 0.02;
     }
   });
 
@@ -23,10 +24,12 @@ const SpinningGlobe = () => {
 
 const GlobeScene = () => {
   return (
-    <Canvas style={{ height: "50%"}}>
+    <Canvas style={{ height: "50%" }}>
       <ambientLight intensity={0.5} />
-      <directionalLight position={[2, 2, 5]} />
+      <directionalLight position={[5, 5, 5]} intensity={1} />
+      <directionalLight position={[-5, -5, -5]} intensity={0.5} />
       <SpinningGlobe />
+      <OrbitControls  />
     </Canvas>
   );
 };
