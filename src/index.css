@@ -83,3 +83,11 @@
     transform: rotateY(180deg);
   }
 }
+
+canvas {
+  cursor: grab;
+}
+
+canvas:active {
+  cursor: grabbing;
+}

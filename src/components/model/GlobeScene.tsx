@@ -24,7 +24,7 @@ const SpinningGlobe = () => {
 
 const GlobeScene = () => {
   return (
-    <Canvas style={{ height: "50%" }}>
+    <Canvas style={{ height: "50%", width: "60%"}}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <directionalLight position={[-5, -5, -5]} intensity={0.5} />
