@@ -13,7 +13,7 @@ const SpinningGlobe = () => {
   });
 
   return (
-    <mesh ref={globeRef} scale={[2, 2, 2]}>
+    <mesh ref={globeRef} scale={[1.5, 1.5, 1.5]}>
       <sphereGeometry args={[1, 32, 32]} />
       <meshStandardMaterial
         map={new THREE.TextureLoader().load("/2k_earth_daymap.jpg")}
