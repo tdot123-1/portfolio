@@ -91,3 +91,15 @@ canvas {
 canvas:active {
   cursor: grabbing;
 }
+
+.model-canvas {
+  width: 80%;
+  height: 50%;
+}
+
+@media (min-width: 768px) {
+  .model-canvas {
+    width: 40%;
+    height: 40%;
+  }
+}

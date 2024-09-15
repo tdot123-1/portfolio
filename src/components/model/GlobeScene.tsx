@@ -24,13 +24,15 @@ const SpinningGlobe = () => {
 
 const GlobeScene = () => {
   return (
-    <Canvas style={{ height: "40%", width: "40%"}}>
+    <div className="w-5/6 h-3/5 md:w-3/5 md:h-3/5">
+    <Canvas >
       <ambientLight intensity={0.7} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <directionalLight position={[-5, -5, -5]} intensity={0.5} />
       <SpinningGlobe />
       <OrbitControls  />
     </Canvas>
+    </div>
   );
 };
 
