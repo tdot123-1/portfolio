@@ -13,7 +13,7 @@ const SpinningGlobe = () => {
   });
 
   return (
-    <mesh ref={globeRef}>
+    <mesh ref={globeRef} scale={[2, 2, 2]}>
       <sphereGeometry args={[1, 32, 32]} />
       <meshStandardMaterial
         map={new THREE.TextureLoader().load("/2k_earth_daymap.jpg")}
@@ -24,8 +24,8 @@ const SpinningGlobe = () => {
 
 const GlobeScene = () => {
   return (
-    <Canvas style={{ height: "50%", width: "60%"}}>
-      <ambientLight intensity={0.5} />
+    <Canvas style={{ height: "40%", width: "40%"}}>
+      <ambientLight intensity={0.7} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <directionalLight position={[-5, -5, -5]} intensity={0.5} />
       <SpinningGlobe />
