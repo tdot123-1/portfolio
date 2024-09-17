@@ -9,6 +9,8 @@ import {
 } from "../ui/card";
 import { motion } from "framer-motion";
 import { Project } from "@/types/Project";
+import { Badge } from "../ui/badge";
+import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 
 interface ProjectCardProps {
   project: Project;
@@ -29,19 +31,43 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           isFlipped ? "rotate-y-0" : "rotate-y-180"
         } transition-transform duration-700`}
       >
-        <Card className="text-slate-600 bg-slate-100 p-4 shadow-lg h-full w-full">
-          <CardHeader>
+        <Card className="text-slate-600 bg-slate-100  shadow-lg h-full w-full">
+          <CardHeader className="px-6 py-3">
             <CardTitle className="text-center mb-2 underline">
               {project.title}
             </CardTitle>
-            <CardDescription>{project.subtitle}</CardDescription>
+            <CardDescription className="italic">
+              {project.subtitle}
+            </CardDescription>
           </CardHeader>
-          <CardContent>
-            <p className="text-sm">{project.description}</p>
-            <p>Deployed? y/n</p>
-            <p>Technologies: {project.tech.map((techUsed) => (
-              techUsed
-            ))}</p>
+          <CardContent className="flex flex-col gap-2">
+            <ScrollArea className="h-32 w-full border-slate-600 border-2 rounded-md p-2">
+              <p className="text-sm">{project.description}</p>
+            </ScrollArea>
+            <div>
+              {project.deployed && (
+                <Badge className="bg-slate-700 hover:bg-slate-500">
+                  Deployed
+                </Badge>
+              )}
+            </div>
+            <div>
+              <p className="mb-1">Technologies used:</p>
+              <ScrollArea className="w-full whitespace-nowrap ">
+                <ul className="flex gap-2 justify-between">
+                  {project.tech.map((techUsed) => (
+                    <li
+                      key={techUsed.name}
+                      className="flex flex-col items-center"
+                    >
+                      <techUsed.icon />
+                      <span className="text-xs">{techUsed.name}</span>
+                    </li>
+                  ))}
+                </ul>
+                <ScrollBar orientation="horizontal" />
+              </ScrollArea>
+            </div>
           </CardContent>
           <CardFooter>
             <p>{project.link}</p>
