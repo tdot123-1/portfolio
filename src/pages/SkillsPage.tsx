@@ -5,7 +5,7 @@ import DataTable from "@/components/custom/table/DataTable";
 const SkillsPage = () => {
   return (
     <>
-      <div className="bg-slate-100 min-h-screen">
+      <div className="bg-slate-100 min-h-screen pb-8">
         <h2 className="text-center pt-6 text-slate-900 font-bold text-xl">
           Skills overview
         </h2>
