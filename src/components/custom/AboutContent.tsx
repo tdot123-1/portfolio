@@ -20,11 +20,11 @@ const AboutContent = () => {
 
   return (
     <section>
-      <article className="border p-5 mx-auto my-11 w-5/6 h-60 md:w-3/6 lg:w-1/3">
+      <article className="border p-5 mx-auto my-11 w-5/6 h-80 md:w-3/6 lg:w-1/3">
         <h3>{aboutData[currentPage].title}</h3>
         <p>{aboutData[currentPage].content}</p>
       </article>
-      <Pagination className="my-12">
+      <Pagination className="my-12 text-slate-700">
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
@@ -33,6 +33,7 @@ const AboutContent = () => {
               onClick={() => handlePageChange(currentPage - 1)}
             />
           </PaginationItem>
+          <div className="hidden md:flex">
           {aboutData.map((_, index) => (
             <PaginationItem key={index} className="hover:cursor-pointer">
               <PaginationLink
@@ -43,6 +44,7 @@ const AboutContent = () => {
               </PaginationLink>
             </PaginationItem>
           ))}
+          </div>
           <PaginationItem>
             <PaginationNext
               className="hover:cursor-pointer aria-disabled:cursor-not-allowed"

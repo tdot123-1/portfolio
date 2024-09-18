@@ -1,6 +1,9 @@
 import {
+  IconBrandFramerMotion,
+  IconBrandHtml5,
   IconBrandReact,
   IconBrandTailwind,
+  IconBrandThreejs,
   IconBrandTypescript,
   IconBrandVite,
 } from "@tabler/icons-react";
@@ -20,7 +23,10 @@ export const projectsData = [
       { name: "React", icon: IconBrandReact },
       { name: "TypeScript", icon: IconBrandTypescript },
       { name: "TailwindCSS", icon: IconBrandTailwind },
-      { name: "Vite", icon: IconBrandVite}
+      { name: "Vite", icon: IconBrandVite },
+      { name: "Three.js", icon: IconBrandThreejs },
+      { name: "FramerMotion", icon: IconBrandFramerMotion },
+      { name: "HTML", icon: IconBrandHtml5 },
     ],
     deployed: true,
     link: "https://link-to-project",
