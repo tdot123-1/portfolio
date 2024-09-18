@@ -17,9 +17,9 @@ const Contact = () => {
         </PopoverTrigger>
 
         <PopoverContent className="w-fit">
-          <div className="grid grid-cols-2 grid-rows-2 gap-2">
+          <div className="text-slate-800 grid grid-cols-2 grid-rows-2 gap-2">
             <div className="bg-gray-200 p-4 rounded-sm">
-              <span className="flex gap-1 justify-center items-center">
+              <span className=" flex gap-1 justify-center items-center">
                 <MailIcon className="h-5 w-5" /> emailadress@test.com
               </span>
             </div>

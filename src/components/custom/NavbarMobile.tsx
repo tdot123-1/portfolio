@@ -41,7 +41,7 @@ const NavbarMobile = () => {
             <HamburgerMenuIcon className="w-6 h-6" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56">
+        <DropdownMenuContent className="w-56 text-slate-800">
           <DropdownMenuItem asChild>
             <Link to="/about">About</Link>
           </DropdownMenuItem>
@@ -63,18 +63,18 @@ const NavbarMobile = () => {
                 }`}
               >
                 <DropdownMenuItem>
-                  <span className="flex gap-1 justify-center items-center">
+                  <span className="text-slate-800 flex gap-1 justify-center items-center">
                     <MailIcon className="h-4 w-4" /> emailadress@test.com
                   </span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span className="flex gap-1 justify-center items-center">
+                  <span className="text-slate-800 flex gap-1 justify-center items-center">
                     <GitHubLogoIcon className="h-5 w-5" />
                     github/my-account
                   </span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span className="flex gap-1 justify-center">
+                  <span className="text-slate-800 flex gap-1 justify-center">
                     <LinkedInLogoIcon className="h-5 w-5" />
                     linkedIn/my-profile
                   </span>
