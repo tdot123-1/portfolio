@@ -8,6 +8,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "../ui/pagination";
+import { Separator } from "../ui/separator";
 
 const AboutContent = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -20,8 +21,13 @@ const AboutContent = () => {
 
   return (
     <section>
-      <article className="border p-5 mx-auto my-11 w-5/6 h-80 md:w-3/6 lg:w-1/3">
-        <h3>{aboutData[currentPage].title}</h3>
+      <article className="bg-slate-400 text-slate-200 border  shadow-lg p-5 rounded-md mx-auto my-11 w-5/6 h-80 md:w-3/6 lg:w-1/3">
+        <div className="flex justify-between mb-3 pb-2 ">
+          <h3 className="text-xl font-bold text-slate-700">{aboutData[currentPage].title}</h3>
+          <span className="text-sm">{currentPage + 1}/5</span>
+        </div>
+        <Separator className="my-3" />
+
         <p>{aboutData[currentPage].content}</p>
       </article>
       <Pagination className="my-12 text-slate-700">
@@ -34,16 +40,16 @@ const AboutContent = () => {
             />
           </PaginationItem>
           <div className="hidden md:flex">
-          {aboutData.map((_, index) => (
-            <PaginationItem key={index} className="hover:cursor-pointer">
-              <PaginationLink
-                isActive={index === currentPage}
-                onClick={() => handlePageChange(index)}
-              >
-                {index + 1}
-              </PaginationLink>
-            </PaginationItem>
-          ))}
+            {aboutData.map((_, index) => (
+              <PaginationItem key={index} className="hover:cursor-pointer">
+                <PaginationLink
+                  isActive={index === currentPage}
+                  onClick={() => handlePageChange(index)}
+                >
+                  {index + 1}
+                </PaginationLink>
+              </PaginationItem>
+            ))}
           </div>
           <PaginationItem>
             <PaginationNext
