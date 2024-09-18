@@ -13,6 +13,10 @@ export const columns: ColumnDef<Skill>[] = [
   {
     accessorKey: "icon",
     header: "Icon",
+    cell: ({ getValue }) => {
+      const IconComp = getValue() as Icon;
+      return <IconComp />;
+    },
   },
   {
     accessorKey: "name",

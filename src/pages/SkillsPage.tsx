@@ -1,5 +1,5 @@
 import { skillsData } from "@/data/skillsData";
-import { Skill, columns } from "@/components/custom/table/columns";
+import { columns } from "@/components/custom/table/columns";
 import DataTable from "@/components/custom/table/DataTable";
 
 const SkillsPage = () => {
