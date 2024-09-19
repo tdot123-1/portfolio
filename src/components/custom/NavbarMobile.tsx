@@ -41,7 +41,7 @@ const NavbarMobile = () => {
             <HamburgerMenuIcon className="w-6 h-6" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56 text-slate-800">
+        <DropdownMenuContent className="w-56 bg-slate-200 text-slate-800">
           <DropdownMenuItem asChild>
             <Link to="/about">About</Link>
           </DropdownMenuItem>
@@ -58,7 +58,7 @@ const NavbarMobile = () => {
             <DropdownMenuSubTrigger>Contact</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent
-                className={` mt-1 ${
+                className={` mt-1 bg-slate-200 ${
                   isWideScreen ? "static" : "absolute top-8 right-0"
                 }`}
               >

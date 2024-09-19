@@ -18,18 +18,18 @@ const Contact = () => {
 
         <PopoverContent className="w-fit">
           <div className="text-slate-800 grid grid-cols-2 grid-rows-2 gap-2">
-            <div className="bg-gray-200 p-4 rounded-sm">
+            <div className="bg-slate-200 p-4 rounded-sm">
               <span className=" flex gap-1 justify-center items-center">
                 <MailIcon className="h-5 w-5" /> emailadress@test.com
               </span>
             </div>
-            <div className="bg-gray-200 p-4 rounded-sm">
+            <div className="bg-slate-200 p-4 rounded-sm">
               <span className="flex gap-1 justify-center items-center">
                 <GitHubLogoIcon className="h-5 w-5" />
                 github/my-account
               </span>
             </div>
-            <div className="bg-gray-200 p-4 rounded-sm col-span-2 items-center">
+            <div className="bg-slate-200 p-4 rounded-sm col-span-2 items-center">
               <span className="flex gap-1 justify-center items-center">
                 <LinkedInLogoIcon className="h-5 w-5" /> linkedIn/my-profile
               </span>
