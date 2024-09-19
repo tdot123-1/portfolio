@@ -71,7 +71,7 @@ const AboutContent = () => {
               onClick={() => handlePageChange(currentPage - 1)}
             />
           </PaginationItem>
-          <div className="hidden md:flex">
+          <div className="hidden sm:flex">
             {aboutData.map((_, index) => (
               <PaginationItem key={index} className="hover:cursor-pointer">
                 <PaginationLink
