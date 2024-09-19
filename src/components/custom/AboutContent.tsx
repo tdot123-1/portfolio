@@ -42,13 +42,13 @@ const AboutContent = () => {
       <div className="relative w-full flex justify-center h-80">
         <AnimatePresence initial={false} custom={direction}>
           <motion.article
-            key={currentPage} // Change key on page change
+            key={currentPage} 
             custom={direction}
             variants={variants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.5 }} // Adjust duration if needed
+            transition={{ duration: 0.5 }} 
             className="bg-slate-400 text-slate-200 border shadow-lg p-5 rounded-md mx-auto my-11 w-5/6 h-full md:w-3/6 lg:w-1/3 absolute" // Ensuring the block is absolute
           >
             <div className="flex justify-between mb-3 pb-2">
