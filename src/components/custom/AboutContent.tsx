@@ -15,6 +15,7 @@ const AboutContent = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [direction, setDirection] = useState(0);
 
+  // change current page content, animation direction
   const handlePageChange = (newPage: number) => {
     if (newPage >= 0 && newPage < aboutData.length) {
       setDirection(newPage > currentPage ? 1 : -1);
@@ -22,6 +23,7 @@ const AboutContent = () => {
     }
   };
 
+  // animation variants
   const variants = {
     enter: (direction: number) => ({
       x: direction > 0 ? 300 : -300,
