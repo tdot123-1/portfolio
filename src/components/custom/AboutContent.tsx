@@ -51,7 +51,7 @@ const AboutContent = () => {
             animate="center"
             exit="exit"
             transition={{ duration: 0.5 }} 
-            className="bg-slate-400 text-slate-200 border shadow-lg p-5 rounded-md mx-auto my-11 w-5/6 h-full md:w-3/6 lg:w-1/3 absolute" // Ensuring the block is absolute
+            className="bg-slate-400 text-slate-200 border shadow-lg p-5 rounded-md mx-auto my-11 w-5/6 h-full md:w-3/6 lg:w-1/3 absolute" 
           >
             <div className="flex justify-between mb-3 pb-2">
               <h3 className="text-xl font-bold ">

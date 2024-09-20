@@ -43,7 +43,7 @@ const SkillsPage = () => {
     <>
       <div className="bg-slate-100 min-h-screen pb-8">
         <h2 className="text-center pt-6 text-slate-900 font-bold text-xl">
-          Skills overview
+          Skills Overview
         </h2>
         <DataTable columns={columns} data={skillsData} />
       </div>
