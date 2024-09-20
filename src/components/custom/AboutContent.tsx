@@ -10,6 +10,7 @@ import {
 } from "../ui/pagination";
 import { Separator } from "../ui/separator";
 import { AnimatePresence, motion } from "framer-motion";
+import { ScrollArea } from "../ui/scroll-area";
 
 const AboutContent = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -41,26 +42,28 @@ const AboutContent = () => {
 
   return (
     <section className="relative flex flex-col items-center">
-      <div className="relative w-full flex justify-center h-80">
+      <div className="relative w-full flex justify-center h-96">
         <AnimatePresence initial={false} custom={direction}>
           <motion.article
-            key={currentPage} 
+            key={currentPage}
             custom={direction}
             variants={variants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.5 }} 
-            className="bg-slate-400 text-slate-200 border shadow-lg p-5 rounded-md mx-auto my-11 w-5/6 h-full md:w-3/6 lg:w-1/3 absolute" 
+            transition={{ duration: 0.5 }}
+            className="bg-slate-400 text-slate-200 border shadow-lg p-5 rounded-md mx-auto my-11 w-5/6 h-full md:w-3/6 lg:w-1/3 absolute"
           >
             <div className="flex justify-between mb-3 pb-2">
               <h3 className="text-xl font-bold ">
                 {aboutData[currentPage].title}
               </h3>
-              <span className="text-sm">{currentPage + 1}/5</span>
+              <span className="text-xs">{currentPage + 1}/5</span>
             </div>
-            <Separator className="my-3" />
-            <p>{aboutData[currentPage].content}</p>
+            <Separator className="my-3 text-sm" />
+            <ScrollArea className="h-72">
+              <p>{aboutData[currentPage].content}</p>
+            </ScrollArea>
           </motion.article>
         </AnimatePresence>
       </div>
